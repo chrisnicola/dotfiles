@@ -1,0 +1,35 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[user]
+	name = Chris Nicola
+	email = chrisn@tictalking.com
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+[diff]
+	renames = true
+[push] 
+  default = tracking
+[branch]
+  autosetuprebase = always
+[alias]
+	st = status
+	ps = push
+	pu = pull
+	ci = commit -v
+	br = branch
+	co = checkout
+	cp = cherry-pick
+	cia = commit -v -a
+	df = diff
+	lg = log -p
+	rb = rebase
+	spull = !git svn fetch && git svn rebase
+	spush = !git svn dcommit
+	gr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[filter "indent"]
+	clean = cat
+	smudge = cat > ~/.tmp/temp
+	

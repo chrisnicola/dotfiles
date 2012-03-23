@@ -1,0 +1,6 @@
+[submodule "solarized"]
+	path = solarized
+	url = https://github.com/altercation/solarized.git
+[submodule "xfce4-terminal-colors-solarized"]
+	path = xfce4-terminal-colors-solarized
+	url = https://github.com/sgerrand/xfce4-terminal-colors-solarized.git
