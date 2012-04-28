@@ -4,3 +4,6 @@
 [submodule "xfce4-terminal-colors-solarized"]
 	path = xfce4-terminal-colors-solarized
 	url = https://github.com/sgerrand/xfce4-terminal-colors-solarized.git
+[submodule "dotvim"]
+	path = dotvim
+	url = https://github.com/lucisferre/dotvim
