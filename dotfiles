@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "Setting up symlinks"
+ln -s ~/dotfiles/vimrc.local ~/.vimrc.local
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
