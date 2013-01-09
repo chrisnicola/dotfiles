@@ -1,0 +1,54 @@
+let mapleader=','
+let g:mapleader=','
+
+" Plugin Options
+let g:AutoPairsShortcutFastWrap = '<C-e>'
+let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list=1
+let g:Powerline_symbols = 'fancy'
+
+set tabstop=2
+set shiftwidth=2
+set smarttab
+set expandtab
+set novisualbell
+set noerrorbells
+set wildignore+=*.o,*.obj,.git,*.pyc,log,tmp,*.jpg,*.png,*.gif
+set title
+
+" We dont need no stinkin' backup or swap files. We use git!
+set nobackup
+set noswapfile
+
+" Use the system clipboard
+set clipboard=unnamed
+
+set background=light
+colorscheme solarized
+set listchars=tab:▸\ ,eol:¬
+set list
+
+" Custom shortcuts
+map <leader>ss    :setlocal spell!<cr>
+map <leader>sc    :SyntasticCheck<CR>
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+map <space> :noh<cr>
+
+" Format paragraphs quickly
+vmap Q gq
+nmap Q gqap
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Sudo save me a file (and make me a sandwich)
+cmap w!! w !sudo tee % >/dev/null
+
+" Some useful things
+map <leader>r  :checktime<CR>
+nmap <leader>t :TagbarToggle<CR>
+map <leader>rd :redraw!<cr>
