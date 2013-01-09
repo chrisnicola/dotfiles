@@ -9,5 +9,5 @@ cd dotvim
 git submodule init
 git submodule update
 
-sh laptop/mac
 sh dotfiles
+sh laptop/mac
