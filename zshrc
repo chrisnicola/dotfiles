@@ -41,10 +41,14 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Add Postgres.app bin folder for Heroku postgres
+PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 # RVM
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s '/Users/chrisnicola/.rvm/scripts/rvm' ]] && source '/Users/chrisnicola/.rvm/scripts/rvm'
+
+# Add the current path bin folder for Rail 4.0
+PATH=./bin:$PATH
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
