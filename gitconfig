@@ -33,3 +33,5 @@
 	clean = cat
 	smudge = cat > ~/.tmp/temp
 	
+[merge]
+	tool = vimdiff
