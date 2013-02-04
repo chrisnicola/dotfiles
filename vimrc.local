@@ -1,5 +1,6 @@
 let mapleader=','
 let g:mapleader=','
+let g:spf13_no_autochdir = 1
 
 " Plugin Options
 let g:AutoPairsShortcutFastWrap = '<C-e>'
@@ -49,6 +50,7 @@ map <C-l> <C-w>l
 cmap w!! w !sudo tee % >/dev/null
 
 " Some useful things
-map <leader>r  :checktime<CR>
+map <leader>:r  :checktime<CR>
 nmap <leader>t :TagbarToggle<CR>
 map <leader>rd :redraw!<cr>
+map <leader>ev :e ~/.vimrc.local<cr>

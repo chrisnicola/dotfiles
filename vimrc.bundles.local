@@ -1,0 +1,10 @@
+" Bundles "
+
+Bundle 'jade.vim'
+Bundle 'vim-coffee-script'
+Bundle 'git://github.com/bbommarito/vim-slim.git'
+Bundle 'unimpaired.vim'
+
+" Options "
+
+let g:spf13_no_autochdir = 1
