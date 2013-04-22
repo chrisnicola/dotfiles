@@ -7,8 +7,8 @@ TERM=xterm-256color
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
-
+#ZSH_THEME="agnoster"
+#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -39,16 +39,19 @@ plugins=(git rake)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python
 
 # Add Postgres.app bin folder for Heroku postgres
 PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
-
-# RVM
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s '/Users/chrisnicola/.rvm/scripts/rvm' ]] && source '/Users/chrisnicola/.rvm/scripts/rvm'
 
 # Add the current path bin folder for Rail 4.0
 PATH=./bin:$PATH
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh

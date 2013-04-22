@@ -1,9 +1,9 @@
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/chrisnicola/.gitignore
 [user]
 	name = Chris Nicola
-	email = chrisn@tictalking.com
+	email = chnicola@gmail.com
 [color]
 	diff = auto
 	branch = auto
@@ -35,3 +35,9 @@
 	
 [merge]
 	tool = vimdiff
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

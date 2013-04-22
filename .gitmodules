@@ -7,6 +7,3 @@
 [submodule "laptop"]
 	path = laptop
 	url = git@github.com:lucisferre/laptop.git
-[submodule "tmux-powerline"]
-	path = tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
