@@ -38,8 +38,24 @@ plugins=(git rake)
 
 source $ZSH/oh-my-zsh.sh
 
+setopt APPEND_HISTORY # don't overwrite history; append instead
+setopt INC_APPEND_HISTORY # append after each command
+setopt SHARE_HISTORY # share history between shells
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+setopt HIST_VERIFY
+setopt EXTENDED_HISTORY
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+
+eval "$(rbenv init -)"
+
 # Customize to your needs...
-export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python
+export PATH=bin:~/bin:~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python:/usr/local/share/npm/bin
 
 # Add Postgres.app bin folder for Heroku postgres
 PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
@@ -48,8 +64,6 @@ PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 PATH=./bin:$PATH
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
-eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

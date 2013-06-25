@@ -29,6 +29,7 @@
 	spull = !git svn fetch && git svn rebase
 	spush = !git svn dcommit
 	gr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  ada = add -A .
 [filter "indent"]
 	clean = cat
 	smudge = cat > ~/.tmp/temp
@@ -41,3 +42,7 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[github]
+	user = lucisferre
+[mergetool]
+	keepBackup = false
