@@ -1,48 +1,50 @@
 [core]
-	editor = vim
-	excludesfile = /Users/chrisnicola/.gitignore
+  editor = vim
+  excludesfile = /Users/chrisnicola/.gitignore
 [user]
-	name = Chris Nicola
-	email = chnicola@gmail.com
+  name = Chris Nicola
+  email = chnicola@gmail.com
 [color]
-	diff = auto
-	branch = auto
-	status = auto
+  diff = auto
+  branch = auto
+  status = auto
 [diff]
-	renames = true
+  renames = true
 [push] 
   default = tracking
 [branch]
   autosetuprebase = always
 [alias]
-	st = status
-	ps = push
-	pu = pull
-	ci = commit -v
-	br = branch
-	co = checkout
-	cp = cherry-pick
-	cia = commit -v -a
-	df = diff
-	lg = log -p
-	rb = rebase
-	spull = !git svn fetch && git svn rebase
-	spush = !git svn dcommit
-	gr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  st = status
+  ps = push
+  pu = pull
+  ci = commit -v
+  br = branch
+  co = checkout
+  cp = cherry-pick
+  cia = commit -v -a
+  df = diff
+  lg = log -p
+  rb = rebase
+  spull = !git svn fetch && git svn rebase
+  spush = !git svn dcommit
+  gr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ada = add -A .
 [filter "indent"]
-	clean = cat
-	smudge = cat > ~/.tmp/temp
-	
+  clean = cat
+  smudge = cat > ~/.tmp/temp
+
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [github]
-	user = lucisferre
+  user = chrisnicola
 [mergetool]
-	keepBackup = false
+  keepBackup = false
+[rerere]
+  enabled = true

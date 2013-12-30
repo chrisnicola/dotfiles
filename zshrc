@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh configuration.
+
 ZSH=$HOME/.oh-my-zsh
 
 TERM=xterm-256color
@@ -7,7 +8,7 @@ TERM=xterm-256color
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="agnoster"
+ZSH_THEME="agnoster"
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -34,7 +35,7 @@ TERM=xterm-256color
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rake)
+plugins=(git gitfast git-extras rake vi-mode history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,9 +64,15 @@ PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 # Add the current path bin folder for Rail 4.0
 PATH=./bin:$PATH
 
+# Add GCC 4.2
+
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+PATH=/usr/local/heroku/bin:$PATH
+PATH=~/Library/Python/2.7/bin:$PATH
 
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /Users/chrisnicola/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
+
+export MONGOHQ_URL=mongodb://localhost:27017/wealthbar_development

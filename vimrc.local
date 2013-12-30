@@ -1,15 +1,13 @@
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-
 let mapleader=','
 let g:mapleader=','
 
 " Plugin Options
 let g:syntastic_auto_jump=0
-let g:syntastic_auto_loc_list=0
-let g:neosnippet#enable_snipmate_compatibility = 1
-
+let g:syntastic_auto_loc_list=1
+"let g:neosnippet#enable_snipmate_compatibility = 1
 let g:used_javascript_libs = 'angularjs'
 
+set shell=/bin/zsh
 set tabstop=2
 set shiftwidth=2
 set smarttab
@@ -53,3 +51,6 @@ cmap w!! w !sudo tee % >/dev/null
 nmap <leader>rr :checktime<CR>
 nmap <leader>rd :redraw!<cr>
 nmap <leader>ev :e ~/.vimrc.local<cr>
+
+" Strip whitespace from certain file types
+autocmd FileType c,cpp,java,php,rb,coffee,erb,slim,js,scss,css autocmd BufWritePre <buffer> :%s/\s\+$//e

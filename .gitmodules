@@ -7,3 +7,6 @@
 [submodule "laptop"]
 	path = laptop
 	url = git@github.com:lucisferre/laptop.git
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = git@github.com:Lokaltog/powerline-fonts.git

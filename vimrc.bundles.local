@@ -1,9 +1,9 @@
 " Overrides "
 
-let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'ruby', 'javascript', 'html', 'misc']
-
+let g:spf13_bundle_groups=['general', 'neocomplete', 'programming', 'ruby', 'javascript', 'html', 'misc']
 let g:spf13_no_autochdir = 1
 let g:spf13_no_views =1
+let g:airline_powerline_fonts = 1
 
 " Bundles "
 
@@ -12,3 +12,5 @@ Bundle 'vim-coffee-script'
 Bundle 'slim-template/vim-slim'
 Bundle 'unimpaired.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
+
+autocmd BufNewFile,BufRead *.html.slim set filetype=slim
