@@ -1,0 +1,16 @@
+" Overrides "
+
+let g:spf13_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc', 'neocomplcache']
+let g:spf13_no_autochdir = 1
+let g:spf13_no_views =1
+let g:airline_powerline_fonts = 1
+let g:solarized_visibility='high'
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+let g:coffee_lint_options = '-f ~/coffeelint.json'
+let g:syntastic_auto_jump=0
+let g:syntastic_auto_loc_list=1
+let g:used_javascript_libs = 'jquery,underscore,angularjs'
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+
+autocmd BufNewFile,BufRead *.html.slim set filetype=slim

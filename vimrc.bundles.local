@@ -1,16 +1,32 @@
 " Overrides "
 
-let g:spf13_bundle_groups=['general', 'neocomplete', 'programming', 'ruby', 'javascript', 'html', 'misc']
 let g:spf13_no_autochdir = 1
 let g:spf13_no_views =1
 let g:airline_powerline_fonts = 1
 
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_warning_symbol = '.'
+let g:ycm_error_symbol = '..'
+
 " Bundles "
 
 Bundle 'jade.vim'
-Bundle 'vim-coffee-script'
 Bundle 'slim-template/vim-slim'
-Bundle 'unimpaired.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'SyntaxComplete'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'carlosvillu/coffeScript-VIM-Snippets'
+Bundle 'a.vim'
+Bundle 'matthewsimo/angular-vim-snippets'
+Bundle 'Townk/dash.vim'
+Bundle 'speeddating.vim'
+Bundle 'parkr/vim-jekyll'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'junegunn/vim-easy-align'
+
+UnBundle 'bling/vim-bufferline'
+UnBundle 'gorodinskiy/vim-coloresque'
 
 autocmd BufNewFile,BufRead *.html.slim set filetype=slim
