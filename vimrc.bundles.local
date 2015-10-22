@@ -8,7 +8,6 @@ let g:airline_powerline_fonts = 1
 " Bundles "
 
 Bundle 'jade.vim'
-Bundle 'vim-coffee-script'
 Bundle 'slim-template/vim-slim'
 Bundle 'unimpaired.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
