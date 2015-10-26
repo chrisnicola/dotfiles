@@ -1,0 +1,7 @@
+let g:spf13_no_autochdir = 1
+let g:spf13_no_views =1
+let g:airline_powerline_fonts = 1
+let g:spf13_bundle_groups=['general', 'youcompleteme', 'programming', 'ruby', 'javascript', 'html', 'misc']
+let g:AutoPairsFlyMode = 1
+
+autocmd BufNewFile,BufRead *.html.slim set filetype=slim

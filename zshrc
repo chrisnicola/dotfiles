@@ -28,3 +28,7 @@ antigen apply
 alias vim=nvim
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export EDITOR='vim'
+
+export PATH="./bin:$HOME/bin:$PATH"
