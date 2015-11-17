@@ -1,2 +1,5 @@
 *.sublime-*
+.idea
+.buildpath
+.project
 .rake_tasks

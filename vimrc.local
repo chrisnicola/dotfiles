@@ -1,12 +1,3 @@
-let mapleader=','
-let g:mapleader=','
-
-" Plugin Options
-let g:syntastic_auto_jump=0
-let g:syntastic_auto_loc_list=1
-"let g:neosnippet#enable_snipmate_compatibility = 1
-let g:used_javascript_libs = 'angularjs'
-
 set shell=/bin/zsh
 set tabstop=2
 set shiftwidth=2
@@ -25,8 +16,7 @@ set noswapfile
 set clipboard=unnamed
 
 set background=light
-colorscheme solarized
-"set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬
 set list
 
 " Custom shortcuts
@@ -38,12 +28,6 @@ nmap <space> :noh<cr>
 vmap Q gq
 nmap Q gqap
 
-" Easy window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
 " Sudo save me a file (and make me a sandwich)
 cmap w!! w !sudo tee % >/dev/null
 
@@ -51,6 +35,27 @@ cmap w!! w !sudo tee % >/dev/null
 nmap <leader>rr :checktime<CR>
 nmap <leader>rd :redraw!<cr>
 nmap <leader>ev :e ~/.vimrc.local<cr>
+nmap <leader>ebv :e ~/.vimrc.bundles.local<cr>
+nmap <leader>epv :e ~/.vimrc.before.local<cr>
+nmap <leader>sd <Plug>DashSearch
+nmap <leader>gd <Plug>DashGlobalSearch
+nmap <leader>tp :silent !thyme -d<cr> :redraw!<cr>
+nmap <leader>tb :silent !thyme -db<cr> :redraw!<cr>
 
 " Strip whitespace from certain file types
 autocmd FileType c,cpp,java,php,rb,coffee,erb,slim,js,scss,css autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+let g:EclimCompletionMethod = 'omnifunc'
+let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute", "is not recognized!", "discarding unexpected"]
+
+let g:dash_map = {
+    \ 'coffee' : 'angularjs lodash jquery',
+    \ 'sass' : 'bourbon neat'
+    \ }
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)

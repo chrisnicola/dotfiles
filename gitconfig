@@ -3,9 +3,10 @@
   excludesfile = /Users/chrisnicola/.gitignore
 [user]
   name = Chris Nicola
-  email = chnicola@gmail.com
+	email = chris.nicola@wealthbar.com
 [color]
   diff = auto
+  ui = auto
   branch = auto
   status = auto
 [diff]
@@ -24,6 +25,7 @@
   cp = cherry-pick
   cia = commit -v -a
   df = diff
+  dfr = diff -R
   lg = log -p
   rb = rebase
   spull = !git svn fetch && git svn rebase
@@ -36,15 +38,13 @@
 
 [merge]
   tool = vimdiff
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
 [github]
   user = chrisnicola
 [mergetool]
   keepBackup = false
 [rerere]
   enabled = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true

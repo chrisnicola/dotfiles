@@ -9,7 +9,7 @@
 	url = git@github.com:lucisferre/laptop.git
 [submodule "powerline-fonts"]
 	path = powerline-fonts
-	url = git@github.com:Lokaltog/powerline-fonts.git
+	url = https://github.com/powerline/fonts.git
 [submodule "antigen"]
 	path = antigen
 	url = https://github.com/zsh-users/antigen.git
