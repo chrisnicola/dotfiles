@@ -46,6 +46,8 @@ nmap <leader>tb :silent !thyme -db<cr> :redraw!<cr>
 autocmd FileType c,cpp,java,php,rb,coffee,erb,slim,js,scss,css autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 let g:EclimCompletionMethod = 'omnifunc'
+let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute", "is not recognized!", "discarding unexpected"]
 
 let g:dash_map = {
     \ 'coffee' : 'angularjs lodash jquery',

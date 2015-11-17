@@ -25,6 +25,7 @@ Bundle 'parkr/vim-jekyll'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'tpope/vim-rbenv'
 
 UnBundle 'bling/vim-bufferline'
 UnBundle 'gorodinskiy/vim-coloresque'

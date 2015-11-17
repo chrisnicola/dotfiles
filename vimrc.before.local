@@ -11,6 +11,5 @@ let g:coffee_lint_options = '-f ~/coffeelint.json'
 let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
 let g:used_javascript_libs = 'jquery,underscore,angularjs'
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 autocmd BufNewFile,BufRead *.html.slim set filetype=slim
