@@ -4,15 +4,10 @@ git submodule init
 git submodule update
 
 echo "Setting up symlinks"
-  ln -s ~/dotfiles/dotvim/zshrc ~/.zshrc
-  ln -s ~/dotfiles/dotvim/vimrc.local ~/.vimrc.local
-  ln -s ~/dotfiles/dotvim/vimrc.bundles.local ~/.vimrc.bundles.local
+  ln -s ~/dotfiles/zshrc ~/.zshrc
+  ln -s ~/dotfiles/vimrc.local ~/.vimrc.local
+  ln -s ~/dotfiles/vimrc.before.local ~/.vimrc.before.local
+  ln -s ~/dotfiles/vimrc.bundles.local ~/.vimrc.bundles.local
   ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
   ln -s ~/dotfiles/gitconfig ~/.gitconfig
-
-echo "Setting up powerline font ..."
-  cp ~/dotfiles/dotvim/*.otf ~/Library/Fonts/
-
-~/dotfiles/laptop/mac
-~/dotfiles/laptop/local
-
+  ln -s ~/dotfiles/gitignore ~/.gitignore

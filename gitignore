@@ -2,3 +2,4 @@
 .idea
 .buildpath
 .project
+.rake_tasks

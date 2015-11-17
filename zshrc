@@ -1,25 +1,35 @@
-DEFAULT_USER=chrisnicola
+source ~/dotfiles/antigen/antigen.zsh
 
-# Path to your oh-my-zsh configuration.
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle git-extras
+antigen bundle git-prompt
+antigen bundle rake-fast
+antigen bundle rake
+antigen bundle ruby
+antigen bundle rbenv
+antigen bundle tmux
+antigen bundle brew
+antigen bundle brew-cask
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle history-substring-search
 
-TERM=xterm-256color
-#
-eval "$(rbenv init -)"
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen bundle chrissicool/zsh-256color
 
-# Customize to your needs...
-export PATH=bin:~/bin:~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/npm/bin
+antigen theme halfo/lambda-mod-zsh-theme lambda-mod
 
-# Add Postgres.app bin folder for Heroku postgres
-PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
+antigen apply
 
-# Add the current path bin folder for Rail 4.0
-PATH=./bin:$PATH
+alias vim=nvim
 
-# Add GCC 4.2
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+export EDITOR='vim'
 
-### Added by the Heroku Toolbelt
-PATH=/usr/local/heroku/bin:$PATH
-
-export EDITOR=vim
+export PATH="./bin:$HOME/bin:$PATH"
+>>>>>>> e492d0fba412837a118e027a5984422284c3ed85
