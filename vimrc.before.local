@@ -1,6 +1,6 @@
 " Overrides "
-
-let g:spf13_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc', 'neocomplcache']
+let g:deoplete#enable_at_startup = 1
+let g:spf13_bundle_groups=['general', 'programming', 'ruby', 'javascript', 'html', 'misc']
 let g:spf13_no_autochdir = 1
 let g:spf13_no_views =1
 let g:airline_powerline_fonts = 1
@@ -11,5 +11,11 @@ let g:coffee_lint_options = '-f ~/coffeelint.json'
 let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
 let g:used_javascript_libs = 'jquery,underscore,angularjs'
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:tsuquyomi_use_local_typescript = 1
+let g:ruby_indent_access_modifier_style = 'indent'
+let g:spf13_leader = "\\"
 
 autocmd BufNewFile,BufRead *.html.slim set filetype=slim
