@@ -34,9 +34,6 @@
   spush = !git svn dcommit
   gr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ada = add -A .
-[filter "indent"]
-  clean = cat
-  smudge = cat > ~/.tmp/temp
 [diff]
   renames = true
   tool = nvimdiff
@@ -55,8 +52,4 @@
   user = chrisnicola
 [rerere]
   enabled = true
-[filter "lfs"]
-  clean = git lfs clean %f
-  smudge = git lfs smudge %f
-  required = true
 
