@@ -1,18 +1,19 @@
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = /Users/chrisnicola/.gitignore
+  ignorecase = false
 [user]
   name = Chris Nicola
-	email = chris.nicola@wealthbar.com
+  email = chris.nicola@wealthbar.com
 [color]
   diff = auto
   ui = auto
   branch = auto
   status = auto
-[diff]
-  renames = true
 [push] 
   default = tracking
+[pull]
+  rebase = true
 [branch]
   autosetuprebase = always
 [alias]
@@ -24,6 +25,7 @@
   co = checkout
   cp = cherry-pick
   cia = commit -v -a
+  cam = commit -v -a -am
   df = diff
   dfr = diff -R
   lg = log -p
@@ -35,16 +37,26 @@
 [filter "indent"]
   clean = cat
   smudge = cat > ~/.tmp/temp
-
+[diff]
+  renames = true
+  tool = nvimdiff
+[difftool]
+  prompt = false
+[difftool "nvimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [merge]
-  tool = vimdiff
+  tool = nvimdiff
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "nvimdiff"]
+  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [github]
   user = chrisnicola
-[mergetool]
-  keepBackup = false
 [rerere]
   enabled = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
+

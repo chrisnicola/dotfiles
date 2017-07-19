@@ -48,7 +48,6 @@ nmap <leader>tb :silent !thyme -db<cr> :redraw!<cr>
 " Strip whitespace from certain file types
 autocmd FileType c,cpp,java,php,rb,coffee,erb,slim,js,scss,css autocmd BufWritePre <buffer> :%s/\s\+$//e
 
-let g:EclimCompletionMethod = 'omnifunc'
 let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_html_tidy_ignore_errors=["proprietary attribute", "is not recognized!", "discarding unexpected"]
 
@@ -63,11 +62,6 @@ vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
 
-" Snippet key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
@@ -75,9 +69,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-
-" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
 
 autocmd BufWritePost,BufRead * Neomake
 
@@ -88,3 +79,11 @@ let g:neomake_ruby_rubocop_maker = {
   \ }
 
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
+
+nmap <C-p> :Files<cr>
+nmap <leader>g :Files<cr>
+nmap <leader>b :Buffers<cr>
+
+set rtp+=~/.fzf
+
+set verbosefile=~/.vim.verbose.log
